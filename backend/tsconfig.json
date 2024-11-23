@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "outDir": "./dist"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": [
+    "./**/*",
+    "custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.js",
+    "src/**/*.jsx",
+  ]
+}
