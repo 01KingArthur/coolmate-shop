@@ -1,0 +1,15 @@
+{
+    "bail": 1,
+    "verbose": true,
+    "testEnvironment": "jest-environment-jsdom",
+    "setupFilesAfterEnv": [
+        "@testing-library/jest-dom"
+    ],
+    "transform": {
+        "^.+\\.jsx?$": "babel-jest",
+        "^.+\\.css$": "jest-transform-stub"
+    },
+    "moduleNameMapper": {
+        "^~/(.*)$": "<rootDir>/src/$1"
+    }
+}
