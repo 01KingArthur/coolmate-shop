@@ -191,7 +191,8 @@ class OrderService {
 
     for (let i = 0; i < orderItems.length; i++) {
       const item = orderItems[i];
-      const productInDB = await this.productRepository.findOne({ where: { id: parseInt(item.product.id) } });
+      const productInDB = await
+          this.productRepository.findOne({ where: { id: parseInt(item.product.id) } });
 
       if (!productInDB) {
         continue;
