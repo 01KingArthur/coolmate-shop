@@ -31,12 +31,16 @@ function CartTop({ toggleShowCart }) {
   );
 }
 
-export function CartMain({ cart, addProductQuantity, removeFromCart }) {
-  const products = cart.map((itemCart, index) => {
-    return <CartProducts index={index} itemCart={itemCart} addProductQuantity={addProductQuantity} removeFromCart={removeFromCart} key={index} />;
-  });
+export function CartMain({ cart = [], addProductQuantity, removeFromCart }) {
+    const products = cart.map((itemCart, index) => {
+        return <CartProducts index={index} itemCart={itemCart} addProductQuantity={addProductQuantity} removeFromCart={removeFromCart} key={index} />;
+    });
 
-  return <div className="cart-main_container">{products.length < 1 ? <div style={{ textAlign: 'center', fontSize: '1.6rem' }}>Your cart is empty :( </div> : products}</div>;
+    return (
+        <div>
+            {products}
+        </div>
+    );
 }
 
 function CartProducts({ index, itemCart, addProductQuantity, removeFromCart }) {
